@@ -94,8 +94,11 @@ COPY scripts/install-openssl-android-gcc-armv7.sh /tmp/build/
 RUN /tmp/build/install-openssl-android-gcc-armv7.sh \    
 # Reconfigure locale
     && locale-gen en_US.UTF-8 && dpkg-reconfigure locales \
-# Add group & user
-    && groupadd -r user && useradd --create-home --gid user user && echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
+# Add group & user, and make the SDK directory writable
+    && groupadd -r user \
+    && useradd --create-home --gid user user \
+    && echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user \
+    && chown -R user:user $ANDROID_HOME
 
 USER user
 WORKDIR /home/user
