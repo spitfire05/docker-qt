@@ -25,4 +25,4 @@ unzip -q /tmp/sdk-tools.zip -d ${ANDROID_SDK_ROOT}
 rm -fv /tmp/sdk-tools.zip
 yes | sdkmanager --licenses
 sdkmanager --update
-sdkmanager --verbose "platforms;${SDK_PLATFORM}" "build-tools;${SDK_BUILD_TOOLS}" ${SDK_PACKAGES}
+sdkmanager --verbose "platforms;${SDK_PLATFORM}" "platforms;android-28" "build-tools;${SDK_BUILD_TOOLS}" ${SDK_PACKAGES}
