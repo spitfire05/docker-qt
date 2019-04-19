@@ -5,6 +5,11 @@
 
 set -e #quit on error 
 
+if [ -z "$LINUXDEPLOYQT_VERSION" ]; then
+    echo "Please define the LINUXDEPLOYQT_VERSION environment variable as desired"
+    exit 1
+fi
+
 mkdir -p /usr/local/bin
-curl -Lo/usr/local/bin/linuxdeployqt "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"
+curl -Lo/usr/local/bin/linuxdeployqt "https://github.com/probonopd/linuxdeployqt/releases/download/$LINUXDEPLOYQT_VERSION/linuxdeployqt-$LINUXDEPLOYQT_VERSION-x86_64.AppImage"
 chmod a+x /usr/local/bin/linuxdeployqt

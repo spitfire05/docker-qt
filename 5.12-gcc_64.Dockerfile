@@ -6,6 +6,7 @@ MAINTAINER Aurélien Brooke <dev@abrooke.fr>
 
 ARG QT_VERSION=5.12.2
 ARG SDL_VERSION=2.0.9
+ARG LINUXDEPLOYQT_VERSION=6
 
 ENV DEBIAN_FRONTEND=noninteractive \
     QMAKESPEC=linux-g++ \
