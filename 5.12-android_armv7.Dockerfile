@@ -5,8 +5,8 @@ FROM ubuntu:18.04
 MAINTAINER Aurélien Brooke <dev@abrooke.fr>
 
 ARG NDK_VERSION=r19c
-ARG OPENSSL_VERSION=1.0.2s
-ARG QT_VERSION=5.12.3
+ARG OPENSSL_VERSION=1.1.1c
+ARG QT_VERSION=5.12.4
 ARG SDK_BUILD_TOOLS=28.0.3
 ARG SDK_PACKAGES="tools platform-tools"
 ARG SDK_PLATFORM=android-21
@@ -18,7 +18,6 @@ ENV \
     ANDROID_NDK_HOST=linux-x86_64 \
     ANDROID_NDK_TOOLCHAIN_PREFIX=arm-linux-androideabi \
     ANDROID_NDK_TOOLCHAIN_VERSION=4.9 \
-    CLANG_TARGET=arm-none-linux-android \
     DEBIAN_FRONTEND=noninteractive \
     QMAKESPEC=android-clang \
     QT_PATH=/opt/qt \

@@ -18,7 +18,6 @@ ENV \
     ANDROID_NDK_HOST=linux-x86_64 \
     ANDROID_NDK_TOOLCHAIN_PREFIX=arm-linux-androideabi \
     ANDROID_NDK_TOOLCHAIN_VERSION=4.9 \
-    CLANG_TARGET=arm-none-linux-android \
     DEBIAN_FRONTEND=noninteractive \
     QMAKESPEC=android-g++ \
     QT_PATH=/opt/qt \
