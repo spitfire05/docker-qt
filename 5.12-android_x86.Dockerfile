@@ -16,7 +16,7 @@ ENV \
     ANDROID_NDK_ARCH=arch-x86 \
     ANDROID_NDK_EABI=llvm \
     ANDROID_NDK_HOST=linux-x86_64 \
-    ANDROID_NDK_TOOLCHAIN_PREFIX=i686-linux-android \
+    ANDROID_NDK_TOOLCHAIN_PREFIX=x86 \
     ANDROID_NDK_TOOLCHAIN_VERSION=4.9 \
     DEBIAN_FRONTEND=noninteractive \
     QMAKESPEC=android-clang \
