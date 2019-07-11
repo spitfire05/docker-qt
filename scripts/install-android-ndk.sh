@@ -4,7 +4,7 @@
 # Aurélien Brooke - License: MIT
 
 if [ -z "$NDK_VERSION" ]; then
-    echo "Please define the NDK_VERSION environment variable as desired, e.g. r18b"
+    echo "Please define the NDK_VERSION environment variable as desired, e.g. r19c"
     exit 1
 fi
 
