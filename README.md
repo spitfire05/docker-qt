@@ -4,17 +4,13 @@ Qt toolchain Docker images
 ==========================
 
 Qt 5.9.7 LTS
-* `a12e/docker-qt:5.9-android_armv7` (Platform 21, NDK r17c [gcc], OpenSSL 1.0.2r)
+* `a12e/docker-qt:5.9-android_armv7` (Platform 21, NDK r17c [gcc], OpenSSL 1.0.2s)
 * `a12e/docker-qt:5.9-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt)
 
-Qt 5.10.1
-* `a12e/docker-qt:5.10-android_armv7` (Platform 21, NDK r17c [gcc], OpenSSL 1.0.2r)
-* `a12e/docker-qt:5.10-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt)
-
 Qt 5.12.3 LTS
-* `a12e/docker-qt:5.12-android_armv7` (Platform 21, NDK r18b [clang], OpenSSL 1.0.2r)
-* `a12e/docker-qt:5.12-android_arm64_v8a` (Platform 21, NDK r18b [clang], OpenSSL 1.0.2r)
-* `a12e/docker-qt:5.12-android_x86` (Platform 21, NDK r18b [clang], OpenSSL 1.0.2r)
+* `a12e/docker-qt:5.12-android_armv7` (Platform 21, NDK r18b [clang], OpenSSL 1.0.2s)
+* `a12e/docker-qt:5.12-android_arm64_v8a` (Platform 21, NDK r18b [clang], OpenSSL 1.0.2s)
+* `a12e/docker-qt:5.12-android_x86` (Platform 21, NDK r18b [clang], OpenSSL 1.0.2s)
 * `a12e/docker-qt:5.12-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt)
 
 Android example
