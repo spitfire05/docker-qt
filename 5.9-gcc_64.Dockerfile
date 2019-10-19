@@ -24,6 +24,7 @@ ENV \
 #  * libsm6, libice6, libxext6, libxrender1, libfontconfig1, libdbus-1-3 - dependencies of the Qt bundle run-file
 #  * wget - another download utility
 #  * fuse, file - linuxdeployqt dependencies
+#  * libgstreamer-plugins-base1.0-0 - QtMultimedia run-time dependencies
 RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends \
     git \
     openssh-client \
@@ -44,6 +45,7 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     wget \
     fuse \
     file \
+    libgstreamer-plugins-base1.0-0 \
     && apt-get -qq clean
 
 COPY 3rdparty/* /tmp/build/

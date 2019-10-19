@@ -25,6 +25,7 @@ ENV \
 #  * wget - another download utility
 #  * fuse, file - linuxdeployqt dependencies
 #  * libxkbcommon-x11-0 - run-time dependencies
+#  * libgstreamer-plugins-base1.0-0 - QtMultimedia run-time dependencies
 RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends \
     git \
     openssh-client \
@@ -46,6 +47,7 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     fuse \
     file \
     libxkbcommon-x11-0 \
+    libgstreamer-plugins-base1.0-0 \
     && apt-get -qq clean
 
 COPY 3rdparty/* /tmp/build/
