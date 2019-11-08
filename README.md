@@ -4,7 +4,7 @@ Qt toolchain Docker images
 ==========================
 
 Qt 5.9.8 LTS (EOL 2020-05-31)
-* `a12e/docker-qt:5.9-android_armv7` (Platform 21, NDK r17c [gcc], OpenSSL 1.0.2s [EOL 2019-12-31])
+* `a12e/docker-qt:5.9-android_armv7` (Platform 21, NDK r17c [gcc], OpenSSL 1.0.2t [EOL 2019-12-31])
 * `a12e/docker-qt:5.9-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
 
 Qt 5.12.5 LTS (EOL 2021)
