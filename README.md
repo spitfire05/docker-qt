@@ -8,16 +8,16 @@ Qt 5.9.8 LTS (EOL 2020-05-31)
 * `a12e/docker-qt:5.9-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
 
 Qt 5.12.5 LTS (EOL 2021)
-* `a12e/docker-qt:5.12-android_armv7` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
-* `a12e/docker-qt:5.12-android_arm64_v8a` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
-* `a12e/docker-qt:5.12-android_x86` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
+* `a12e/docker-qt:5.12-android_armv7` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
+* `a12e/docker-qt:5.12-android_arm64_v8a` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
+* `a12e/docker-qt:5.12-android_x86` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.12-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
 
 Qt 5.13.2 (EOL 2020)
-* `a12e/docker-qt:5.13-android_armv7` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
-* `a12e/docker-qt:5.13-android_arm64_v8a` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
-* `a12e/docker-qt:5.13-android_x86` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
-* `a12e/docker-qt:5.13-android_x86_64` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1c)
+* `a12e/docker-qt:5.13-android_armv7` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
+* `a12e/docker-qt:5.13-android_arm64_v8a` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
+* `a12e/docker-qt:5.13-android_x86` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
+* `a12e/docker-qt:5.13-android_x86_64` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.13-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
 
 Android example
