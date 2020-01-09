@@ -1,7 +1,7 @@
 # Docker container to build Qt 5.12 for Linux 64-bits projects with SDL and linuxdeployqt
 # Image: a12e/docker-qt:5.12-gcc_64
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER Aurélien Brooke <dev@abrooke.fr>
 
 ARG QT_VERSION=5.12.6
@@ -43,6 +43,7 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     libfontconfig1 \
     libdbus-1-3 \
     libssl-dev \
+    openssl \
     wget \
     fuse \
     file \
