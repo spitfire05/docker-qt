@@ -3,22 +3,22 @@ These Docker images allow you to very easily build a Qt app accross all platform
 Qt toolchain Docker images
 ==========================
 
-Qt 5.9.8 LTS (EOL 2020-05-31)
+Qt 5.9.9 LTS (EOL 2020-05-31)
 * `a12e/docker-qt:5.9-android_armv7` (Platform 21, NDK r17c [gcc], OpenSSL 1.0.2t [EOL 2019-12-31])
-* `a12e/docker-qt:5.9-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
+* `a12e/docker-qt:5.9-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt continuous)
 
 Qt 5.12.6 LTS (EOL 2021)
 * `a12e/docker-qt:5.12-android_armv7` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.12-android_arm64_v8a` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.12-android_x86` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
-* `a12e/docker-qt:5.12-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
+* `a12e/docker-qt:5.12-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt continuous)
 
 Qt 5.13.2 (EOL 2020)
 * `a12e/docker-qt:5.13-android_armv7` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.13-android_arm64_v8a` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.13-android_x86` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
 * `a12e/docker-qt:5.13-android_x86_64` (Platform 21, NDK r19c [clang], OpenSSL 1.1.1d)
-* `a12e/docker-qt:5.13-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt 6)
+* `a12e/docker-qt:5.13-gcc_64` (Ubuntu 16.04 LTS, SDL 2.0.9, linuxdeployqt continuous)
 
 Android example
 ---------------
@@ -70,5 +70,3 @@ Notes
 -----
 
 OpenSSL for Android is compiled and installed directly in `${ANDROID_DEV}`, and is platform-specific (API 21 in most cases). You can compile against it transparently, but you need to ship the libraries for run time. Look at `ANDROID_EXTRA_LIBS`.
-
-Linux images are built inside a 16.04 LTS Ubuntu and not 18.04 LTS, to allow the AppImage's to be run on older systems. Otherwise, links to too recent versions of GLIBC are made.
