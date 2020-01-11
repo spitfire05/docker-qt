@@ -1,20 +1,22 @@
-# Docker container to build Qt 5.12 for Linux 64-bits projects with SDL and linuxdeployqt
+# Docker container to build Qt 5.12 for Linux 64-bits projects with latest linuxdeployqt, OpenSSL and SDL
 # Image: a12e/docker-qt:5.12-gcc_64
 
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 MAINTAINER Aurélien Brooke <dev@abrooke.fr>
 
+ARG OPENSSL_VERSION=1.1.1d
 ARG QT_VERSION=5.13.2
 ARG SDL_VERSION=2.0.9
 ARG LINUXDEPLOYQT_VERSION=continuous
 
 ENV DEBIAN_FRONTEND=noninteractive \
+    OPENSSL_PREFIX=/usr/local/ssl \
     QMAKESPEC=linux-g++ \
     QT_PATH=/opt/qt \
     QT_PLATFORM=gcc_64
 
 ENV \
-    PATH=${QT_PATH}/${QT_VERSION}/${QT_PLATFORM}/bin:$PATH
+    PATH=${QT_PATH}/${QT_VERSION}/${QT_PLATFORM}/bin:${OPENSSL_PREFIX}/bin:$PATH
 
 # Install updates & requirements:
 #  * git, openssh-client, ca-certificates - clone & build
@@ -23,6 +25,7 @@ ENV \
 #  * build-essential, pkg-config, libgl1-mesa-dev - basic Qt build requirements
 #  * libsm6, libice6, libxext6, libxrender1, libfontconfig1, libdbus-1-3 - dependencies of the Qt bundle run-file
 #  * wget - another download utility
+#  * libz-dev - OpenSSL dependencies
 #  * fuse, file - linuxdeployqt dependencies
 #  * libxkbcommon-x11-0 - run-time dependencies
 #  * libgstreamer-plugins-base1.0-0 - QtMultimedia run-time dependencies
@@ -42,9 +45,8 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     libxrender1 \
     libfontconfig1 \
     libdbus-1-3 \
-    libssl-dev \
-    openssl \
     wget \
+    libz-dev \
     fuse \
     file \
     libxkbcommon-x11-0 \
@@ -52,17 +54,18 @@ RUN apt update && apt full-upgrade -y && apt install -y --no-install-recommends 
     && apt-get -qq clean
 
 COPY 3rdparty/* /tmp/build/
+COPY scripts/* /tmp/build/
+
+# Download and install OpenSSL
+RUN /tmp/build/install-openssl-linux.sh
 
 # Download & unpack Qt toolchain
-COPY scripts/install-qt.sh /tmp/build/
 RUN /tmp/build/install-qt.sh
 
 # Download, build & install SDL
-COPY scripts/install-sdl.sh /tmp/build/
 RUN /tmp/build/install-sdl.sh
 
 # Download & install linuxdeployqt
-COPY scripts/install-linuxdeployqt.sh /tmp/build/
 RUN /tmp/build/install-linuxdeployqt.sh
 
 # Reconfigure locale
