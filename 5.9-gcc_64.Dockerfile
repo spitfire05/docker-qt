@@ -5,7 +5,7 @@ FROM ubuntu:16.04
 MAINTAINER Aurélien Brooke <dev@abrooke.fr>
 
 ARG QT_VERSION=5.9.9
-ARG SDL_VERSION=2.0.9
+ARG SDL_VERSION=2.0.10
 ARG LINUXDEPLOYQT_VERSION=continuous
 
 ENV DEBIAN_FRONTEND=noninteractive \
