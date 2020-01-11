@@ -1,11 +1,11 @@
-# Docker container to build Qt 5.13 for Linux 64-bits projects with latest linuxdeployqt, OpenSSL and SDL
-# Image: a12e/docker-qt:5.13-gcc_64
+# Docker container to build Qt 5.14 for Linux 64-bits projects with latest linuxdeployqt, OpenSSL and SDL
+# Image: a12e/docker-qt:5.14-gcc_64
 
 FROM ubuntu:16.04
 MAINTAINER Aurélien Brooke <dev@abrooke.fr>
 
 ARG OPENSSL_VERSION=1.1.1d
-ARG QT_VERSION=5.13.2
+ARG QT_VERSION=5.14.0
 ARG SDL_VERSION=2.0.10
 ARG LINUXDEPLOYQT_VERSION=continuous
 
